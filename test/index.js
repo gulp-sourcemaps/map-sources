@@ -4,6 +4,7 @@ var expect = require('expect');
 
 var miss = require('mississippi');
 var File = require('vinyl');
+var normalize = require('normalize-path');
 
 var mapSources = require('../');
 
@@ -217,8 +218,9 @@ describe('mapSources', function() {
       expect(files.length).toEqual(1);
 
       var file = files[0];
+      var base = normalize(file.base);
 
-      expect(file.sourceMap.sources).toEqual([file.base + '/helloworld.js', file.base + '/helloworld2.js']);
+      expect(file.sourceMap.sources).toEqual([base + '/helloworld.js', base + '/helloworld2.js']);
     }
 
     pipe([
