@@ -1,6 +1,6 @@
 {
   "name": "@gulp-sourcemaps/map-sources",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Gulp plugin for mapping sources of a sourcemap.",
   "author": "Gulp-sourcemaps Team",
   "contributors": [
